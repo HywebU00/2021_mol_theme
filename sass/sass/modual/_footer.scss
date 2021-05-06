@@ -1,0 +1,175 @@
+footer {
+    box-sizing: border-box;
+    @include clearfix;
+    text-align: left;
+    font-size: 0.813em;
+    padding: 1em 0;
+    background: $color-dark;
+
+    .container {
+        @include gutter;
+
+        @include screen('tablet') {
+            flex-wrap: wrap;
+        }
+    }
+
+    a {
+        text-decoration: none;
+
+        &:focus {
+            box-shadow: 0 0px 0px 2px $lightColor inset;
+        }
+    }
+
+    .footertop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-width: 1px 0 1px 0;
+        border-style: solid;
+        border-color: $color-line;
+        padding: 2em 0;
+        margin: 1em 0;
+        @include screen('tablet'){
+            padding: 1em 0;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        @include screen('mobile'){
+            border-top-width: 0;
+        }
+    }
+
+    .footer_logo {
+        flex: 0 1 180px;
+        display: flex;
+    }
+
+    .footer_icon {
+        display: flex;
+        flex: 0 1 auto;
+        justify-content: flex-end;
+
+        @include screen('tablet') {
+            flex: 1 1 100%;
+            text-align: right;
+            justify-content: flex-start;
+            margin: 1em 0;
+            flex-wrap: wrap;
+        }
+
+        a {
+            display: flex;
+            margin: 0 3px;
+            max-width: 120px;
+            padding: 2px;
+
+            &.share {
+                width: 44px;
+                height: 44px;
+                transition: .3s ease-in;
+                img {
+                    width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+                &:hover{
+                    transform: translateY(-2px);
+                }
+            }
+        }
+
+    }
+    .footer_gov{
+        display: flex;
+        margin-left: 1em;
+        @include screen('mobile'){
+            flex: 0 1 100%;
+            margin: 1em 0;
+        }
+
+    }
+
+    .footer_info{
+        color:$fatfooterLinkColor;
+    }
+
+    // 版權連結
+    .footer_link {
+        @include li-reset();
+        @include clearfix();
+        display: flex;
+        margin-bottom: 1em;
+
+        @include screen('mobile') {
+            flex-direction: column;
+        }
+
+        li {
+            flex: 0 1 auto;
+            margin: 0 1em 0 0;
+            display: flex;
+            align-content: center;
+            color: #fff;
+
+            @include screen('mobile') {
+                flex: 1 1 100%;
+            }
+
+            &:before{
+                content:">";
+                margin: -2px 5px 0 0;
+            }
+
+            a {
+                display: block;
+                color: #FFF;
+                transition: all .3s ease-out;
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .phone_num{
+        span{
+            margin-right: 1em;
+            @include screen('mobile'){
+                display: block;
+            }
+        }
+    }
+    .address, .open_time{
+        display: inline-block;
+        margin-right: 1em;
+        @include screen('mobile'){
+            display: block;
+            margin: 1em 0;
+        }
+    }
+
+    .Copyright{
+        color:$color-word-light;
+    }
+
+    p {
+        line-height: 1.65em;
+    }
+
+    // .update,
+    // .counter {
+    //     display: inline-block;
+    //     margin-right: 5px;
+
+    //     em {
+    //         font-style: normal;
+    //         color: $primaryColor;
+    //         padding: 0 .5em;
+    //     }
+    // }
+
+
+}

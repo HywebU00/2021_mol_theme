@@ -1,0 +1,217 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+
+// more按鈕
+a.more {
+    display: block;
+    background: $secondaryColor;
+    padding: 0 1.5em;
+    border-radius: 2px;
+    width: 10em;
+    height: 2.8em;
+    margin: .5em auto;
+    line-height: 2.8;
+    color: #fff;
+    overflow: hidden;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+
+    &:after {
+        content: "";
+        width: 22px;
+        height: 22px;
+        border: 1px solid #FFF;
+        border-radius: 30px;
+        position: absolute;
+        top: 50%;
+        margin-top: -12px;
+        right: 1em;
+        background: url(../images/icon/icon_more2.svg) no-repeat center;
+        background-size: 50%;
+        transition: .3s ease-out;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $aHover;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+        color: white;
+
+        &:before {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        &:after {
+            transform: rotate(90deg);
+            background-image: url(../images/icon/icon_arrow_up2.svg);
+
+        }
+    }
+}
+
+// 首頁輪播
+.mpSlider_block {
+    padding: 0 4rem;
+    margin-bottom: 4em;
+    @include screen('tablet'){
+        padding: 0 15px;
+    }
+
+    @include screen('mobile') {
+        margin-bottom: 1em;
+        padding: 0;
+    }
+}
+
+.mpSlider {
+    width: 100%;
+    padding-bottom: 0;
+    @include gutter(0);
+
+    .img-container {
+        @include aspect-ratio(5, 1.8);
+    }
+
+
+    // .slick-dots {
+    //     li {
+    //         width: 150px;
+    //         height: auto;
+    //         display: none;
+    //         button {
+    //             width: 150px;
+    //             height: auto;
+    //             font-weight: bold;
+    //             background: none;
+    //             &:hover{
+    //                 background: transparent;
+    //             }
+
+    //             &:before{
+    //                 content: attr(aria-label);
+    //                 width: 100%;
+    //                 font-size: 1rem;
+    //                 border-radius: 0;
+    //                 background: transparent;
+    //             }
+
+    //         }
+    //         &.slick-active{
+    //             display: block;
+    //         }
+       // }
+    //}
+}
+//mpSlider的nav
+.slider-nav{
+    width: 240px;
+    margin: 1em auto;
+    .slick-current{
+        visibility: hidden;
+    }
+    .slick-list{
+        margin-left: -1em;
+    }
+    .slick-prev, .slick-next{
+        width: 60px!important;
+        height: 20px!important;
+        top: 0;
+    }
+
+    .slick-prev{
+        background: url(../images/slick/icon_arrow_left2.svg) center center no-repeat RGBA(255, 255, 255, 0);
+        background-size: 30px;
+        left: -30px;
+    }
+
+    .slick-next{
+        background: url(../images/slick/icon_arrow_right2.svg) center center no-repeat RGBA(255, 255, 255, 0);
+        background-size: 30px;
+        right: -30px;
+    }
+    // .slick-active{
+    //     color: $secondaryColor;
+    // }
+    .slick-slide{
+        font-weight: bold;
+        //text-align: center;
+    }
+}
+
+// 廣告輪播
+.adSlider {
+    @include gutter(70px);
+    margin: 2em 0;
+
+    @include screen('mobile') {
+        @include gutter();
+    }
+
+    // .slick-prev {
+    //     background: url(../vendor/slick/icon_arrow_left_inverse.svg) no-repeat center center;
+    //     background-size: 80%;
+    //     left: -15px;
+    // }
+
+    // .slick-next {
+    //     background: url(../vendor/slick/icon_arrow_right_inverse.svg) no-repeat center center;
+    //     background-size: 80%;
+    //     right: -15px;
+    // }
+
+    .img-container {
+        width: 165px;
+        height: 55px;
+        margin: 0px 15px;
+
+        a {
+            display: block;
+            text-align: center;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        &:focus {
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 9;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                box-shadow: 0 0px 0px 3px $primaryColor inset;
+            }
+        }
+    }
+}
