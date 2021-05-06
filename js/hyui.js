@@ -316,7 +316,7 @@ $(function() {
         var stickyMenuTop = Math.floor($('header .menu').offset().top);
         // console.log(stickyMenuTop);
         //headerHeight = Math.floor($('.header').outerHeight(true));
-        
+
         $(window).bind("load scroll resize", function(e) {
             ww = _window.outerWidth();
             if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
@@ -698,21 +698,19 @@ $(function() {
         return null;
     }
 
-    window.onload = function(e) {
-        var cookie = readCookie("FontSize");
-        //alert('cookie='+cookie);
-        (cookie == '')
-        if (cookie == 'large') {
-            //$('.font_size').find('.large').click();
-            $('.main').addClass('large_size');
-            $('.font_size').find('a').addClass('large');
-            e.preventDefault();
-        } else {
-            $('.main').removeClass('large_size');
-            $('.font_size').find('a').removeClass('large');
-            e.preventDefault();
-        }
-    }
+    // window.onload = function(e) {
+    //     if (cookie == 'large') {
+    //         //$('.font_size').find('.large').click();
+    //         $('.main').addClass('large_size');
+    //         $('.font_size').find('a').addClass('large');
+    //         e.preventDefault();
+    //     } else {
+    //         $('.main').removeClass('large_size');
+    //         $('.font_size').find('a').removeClass('large');
+    //         e.preventDefault();
+    //     }
+    // }
+    
     // window.onload = function(e) {
     //     var cookie = readCookie("FontSize");
     //     if (cookie == 'small') {
