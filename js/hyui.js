@@ -701,6 +701,7 @@ $(function() {
     window.onload = function(e) {
         var cookie = readCookie("FontSize");
         //alert('cookie='+cookie);
+        (cookie == '')
         if (cookie == 'large') {
             //$('.font_size').find('.large').click();
             $('.main').addClass('large_size');
