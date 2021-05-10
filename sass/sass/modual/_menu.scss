@@ -34,14 +34,15 @@
 
             &.hasChild {
                 >a {
+                    position: relative;
                     &:after {
                         content: '';
                         width: 4px;
                         height: 4px;
                         display: inline-block;
-                        margin-left: .5em;
+                        margin-left: .8em;
                         vertical-align: middle;
-                        border: 2px solid lighten($color-word, 40);
+                        border: 2px solid rgba(255, 255, 255, .8);
                         transform: rotate(135deg);
                         border-bottom: none;
                         border-left: none;
@@ -82,7 +83,8 @@
             ul {
                 display: none;
                 overflow: visible;
-                width: 99%;
+                width: 100%;
+                min-width: 10em;
                 background: rgba(0, 0, 0, .8);
                 padding: 0;
                 z-index: 999999;

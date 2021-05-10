@@ -43,7 +43,12 @@ footer {
 
     .footer_logo {
         flex: 0 1 180px;
+        width: 180px;
         display: flex;
+        img{
+            width: 100%;
+            height: auto;
+        }
     }
 
     .footer_icon {
@@ -64,6 +69,7 @@ footer {
             margin: 0 3px;
             max-width: 120px;
             padding: 2px;
+            height: auto;
 
             &.share {
                 width: 44px;
@@ -152,24 +158,24 @@ footer {
     }
 
     .Copyright{
-        color:$color-word-light;
+        color: $color-gray;
     }
 
     p {
         line-height: 1.65em;
     }
 
-    // .update,
-    // .counter {
-    //     display: inline-block;
-    //     margin-right: 5px;
+    .update,
+    .counter {
+        display: inline-block;
+        margin-right: 5px;
 
-    //     em {
-    //         font-style: normal;
-    //         color: $primaryColor;
-    //         padding: 0 .5em;
-    //     }
-    // }
+        em {
+            font-style: normal;
+            color: #fff;
+            padding: 0 .5em;
+        }
+    }
 
 
 }
