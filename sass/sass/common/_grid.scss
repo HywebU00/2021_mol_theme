@@ -213,8 +213,8 @@ $padding-L: 6em;
     @include screen('mobile') {
         .Flex-set{
             justify-content: center;
-            .col{ @include flex-col-equal(1, 0px, 30px); }
-            .thumbnail{ @include flex-col-equal(1, $margin, 0px); }
+            .col{ @include flex-col-equal(1, 0px, $padding); }
+            .thumbnail{ @include flex-col-equal(1, 0px, 0px); }
         }
     }
 }

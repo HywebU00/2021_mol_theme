@@ -31,12 +31,14 @@ footer {
         border-color: $color-line;
         padding: 2em 0;
         margin: 1em 0;
-        @include screen('tablet'){
+
+        @include screen('tablet') {
             padding: 1em 0;
             flex-wrap: wrap;
             justify-content: flex-start;
         }
-        @include screen('mobile'){
+
+        @include screen('mobile') {
             border-top-width: 0;
         }
     }
@@ -45,7 +47,8 @@ footer {
         flex: 0 1 180px;
         width: 180px;
         display: flex;
-        img{
+
+        img {
             width: 100%;
             height: auto;
         }
@@ -67,38 +70,57 @@ footer {
         a {
             display: flex;
             margin: 0 3px;
-            max-width: 120px;
             padding: 2px;
-            height: auto;
 
             &.share {
                 width: 44px;
                 height: 44px;
                 transition: .3s ease-in;
+
                 img {
                     width: 100%;
                     max-height: 100%;
                     object-fit: contain;
                 }
-                &:hover{
+
+                &:hover {
                     transform: translateY(-2px);
                 }
             }
         }
 
     }
-    .footer_gov{
+
+    .footer_gov {
         display: flex;
         margin-left: 1em;
-        @include screen('mobile'){
+
+        @include screen('mobile') {
             flex: 0 1 100%;
             margin: 1em 0;
         }
 
+        .accessibility {
+            width: 120px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .egov {
+            width: 48px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 
-    .footer_info{
-        color:$fatfooterLinkColor;
+    .footer_info {
+        color: $fatfooterLinkColor;
     }
 
     // 版權連結
@@ -123,8 +145,8 @@ footer {
                 flex: 1 1 100%;
             }
 
-            &:before{
-                content:">";
+            &:before {
+                content: ">";
                 margin: -2px 5px 0 0;
             }
 
@@ -140,24 +162,29 @@ footer {
             }
         }
     }
-    .phone_num{
-        span{
+
+    .phone_num {
+        span {
             margin-right: 1em;
-            @include screen('mobile'){
+
+            @include screen('mobile') {
                 display: block;
             }
         }
     }
-    .address, .open_time{
+
+    .address,
+    .open_time {
         display: inline-block;
         margin-right: 1em;
-        @include screen('mobile'){
+
+        @include screen('mobile') {
             display: block;
             margin: 1em 0;
         }
     }
 
-    .Copyright{
+    .Copyright {
         color: $color-gray;
     }
 
