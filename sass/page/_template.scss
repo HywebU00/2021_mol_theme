@@ -683,6 +683,9 @@ body {
         background: $color-lightgray;
         padding: 2em 2em 1em;
         margin-bottom: 1.5em;
+        @include screen('mobile'){
+            padding: 1em;
+        }
 
         .form_title {
             text-align: right;
